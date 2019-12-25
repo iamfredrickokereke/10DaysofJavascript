@@ -12,7 +12,7 @@
     <script>
         //Function that takes in a function
 
-        document.addEventListener(a,b);
+       // document.addEventListener(a,b);
 
         //simple functions
 
@@ -35,7 +35,34 @@
             }
         }
 
-        let 
+        // store high order function in a new variable function
+
+        let doubleMe = createMultiplier(2);
+        let tripleMe = createMultiplier(3);
+        let quadrupleMe = createMultiplier(4);
+
+        // to display result of newly created functions
+
+        document.write(doubleMe(2)); 
+        document.write(tripleMe(3));
+        document.write(quadrupleMe(4));
+
+
+        //note variable can take anything - object,arrays,function,strings,numbers e.tc
+
+        //Real life use of high order function
+
+        let myColors = ['red', 'blue', 'black'];
+
+        myColors.forEach(function (color) {
+            document.write("</br> One of my favorite colors are: " + color + "</br>")
+
+        });
+
+        function saySomethingNice(color) {
+            document.write("</br> xOne of my favorite colors are: " + color + "</br>")
+        }
+        
     </script>
 </body>
 </html>
