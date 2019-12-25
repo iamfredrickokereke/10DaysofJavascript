@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning Objects in JS</title>
+</head>
+<body>
+    <p>In JavaScript, almost "everything" is an object.
+
+        Booleans can be objects (if defined with the new keyword) </br>
+        Numbers can be objects (if defined with the new keyword) </br>
+        Strings can be objects (if defined with the new keyword) </br>
+        Dates are always objects </br>
+        Maths are always objects </br>
+        Regular expressions are always objects </br>
+        Arrays are always objects </br>
+        Functions are always objects </br>
+        Objects are always objects</p>
+
+        <script>
+            let cat = {
+                name : 'fluffy',
+                age : 12,
+                eyeColor : 'blue',
+                food : {
+                    type1 : 'fish',
+                    type2 : 'bread'
+
+                },
+                meow(){
+                  alert("Meowwwwwwwwwwwwww!")
+                }
+            }
+
+
+            alert(cat.food.type1);
+            alert(cat.meow())
+        </script>
+</body>
+</html>
