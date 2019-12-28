@@ -9,6 +9,9 @@
 <body>
     <h1>Understanding Scope and Context in Javascript</h1>
 
+    // Scope is the biggest source of confusion regarding variables.
+    // Context is the biggest source of confusion regarding objects
+
     <script>
        let myName = 'kelvin';
 
@@ -30,6 +33,16 @@
         // scope is a straight way and doesnt go into
         console.log(myName)
         amazingFunction();
+
+
+        let john ={
+            fname: 'john',
+            lname: 'doe',
+            drive(){
+                console.log()
+            }
+        }
+
     </script>
 </body>
 </html>
