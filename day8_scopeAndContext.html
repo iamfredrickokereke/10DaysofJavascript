@@ -57,6 +57,11 @@
 
 john.drive()
 
+function breathe() {
+    console.log(this.fname +" "+ this.lname + ' inhales and exhales value, life, code and love.')
+}
+
+breathe.call(john)
     </script>
 </body>
 </html>
