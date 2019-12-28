@@ -36,12 +36,26 @@
 
 
         let john ={
-            fname: 'john',
-            lname: 'doe',
-            drive(){
-                console.log()
-            }
+    fname: 'john',
+    lname: 'doe',
+    drive(){
+
+        function iamAFunctionNotAMethod() {
+            console.log(this);
         }
+        //this is been invoked immediately within the method and not outside hence not the object calling it.
+        
+        iamAFunctionNotAMethod();
+
+        console.log(john.fname +" "+ this.lname + ' is driving a car')
+    }
+}
+
+//this keyword is all about context
+
+//which changes depending on the context of where its called and not necessarily when
+
+john.drive()
 
     </script>
 </body>
