@@ -10,9 +10,25 @@
     <h2>Anonymous Functions are Functions which do not have a name.</h2>
 
     <script>
+
+        //anonymous function
         document.addEventListener('click', function () {
             alert('You clicked me!')
-        })    
+        })
+        
+        // arrow function
+
+
+        document.addEventListener('keypress', () => alert('Keyboard was pressed!'))
+
+        
+        //hoisting
+
+        let cool =  function() {
+                console.log('hey!')
+            }
+
+            cool()
     </script>
 </body>
 </html>
