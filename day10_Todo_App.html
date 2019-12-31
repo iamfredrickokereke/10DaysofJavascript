@@ -10,18 +10,40 @@
     
     <h1>Daily Todo App</h1>
     <form action="#" id="ourForm">
-        <input type="text" id="ourInput">
+        <input type="text" id="ourInput" autocomplete="off">
         <button>Create item</button>
     </form>
 
     <h2>Things to do:</h2>
-        <ul>
-            <li>Food &nbsp;<button>Delete</button></li>
-            <li>Carrots <button>Delete</button></li>
-            <li>Watch movie <button>Delete</button></li>
-            <li>Food <button>Delete</button></li>
-            <li>Food</li>
-            <li>Food</li>
+        <ul id="ourList">
+            <li> Buy SaladFood &nbsp;<button>Delete</button></li>
+            <li>Buy Carrots <button>Delete</button></li>
         </ul>
+
+    <script>
+
+        //
+        let ourForm = document.getElementById("ourForm")
+        let ourInput = document.getElementById("ourInput")
+        let ourList = document.getElementById("ourList")
+
+        //
+        ourForm.addEventListener("submit", (e) =>{
+
+            e.preventDefault();
+           // alert("i was clicked!")
+           // console.log(ourInput.value)
+
+           let ourHtml = `<li> ${ourInput.value} <button> Delete </button> </li>`
+
+            ourList.insertAdjacentHTML("beforeend", ourHtml)
+
+          // console.log(`<li> ${newList} </li>`)
+
+
+            
+            })
+
+    </script>    
 </body>
 </html>
