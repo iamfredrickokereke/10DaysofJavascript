@@ -34,15 +34,16 @@
            // alert("i was clicked!")
            // console.log(ourInput.value)
 
-           let ourHtml = `<li> ${ourInput.value} <button> Delete </button> </li>`
+           createItem(ourInput.value) 
+           ourInput = ""
 
-            ourList.insertAdjacentHTML("beforeend", ourHtml)
-
-          // console.log(`<li> ${newList} </li>`)
-
-
-            
             })
+function createItem(input) {
+    let ourHtml = `<li> ${input} <button> Delete </button> </li>`
+    ourList.insertAdjacentHTML("beforeend", ourHtml)
+
+}
+
 
     </script>    
 </body>
