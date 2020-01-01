@@ -16,8 +16,7 @@
 
     <h2>Things to do:</h2>
         <ul id="ourList">
-            <li> Buy SaladFood &nbsp;<button>Delete</button></li>
-            <li>Buy Carrots <button>Delete</button></li>
+           
         </ul>
 
     <script>
@@ -35,13 +34,18 @@
            // console.log(ourInput.value)
 
            createItem(ourInput.value) 
-           ourInput = ""
+           ourInput.value = ""
+           ourInput.focus()
 
             })
 function createItem(input) {
-    let ourHtml = `<li> ${input} <button> Delete </button> </li>`
+    let ourHtml = `<li> ${input} <button onclick="deleteMe(this)"> Delete </button> </li>`
     ourList.insertAdjacentHTML("beforeend", ourHtml)
 
+}
+
+function deleteMe(element) {
+    element.parentElement.remove()
 }
 
 
