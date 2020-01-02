@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating a simple todo app</title>
+</head>
+<body>
+    <h1>TO-DO App</h1>
+
+    <form action="#" id="ourForm">
+        <input type="text" name="inputbox" id="ourInput" autocomplete="off" placeholder=" todo item...">
+        <button> Create item</button>
+    </form>
+
+    <h2>List of Active Todo(s):</h2>
+    <ul id="ourList">
+        <li>...Sample item... <button>Delete</button></li>
+    </ul>
+
+    <script>
+       // declare and store components
+
+       let ourForm = document.getElementById("ourForm")
+       let ourInput = document.getElementById("ourInput")
+       let ourList = document.getElementById("ourList")
+
+       //listen for event
+
+       ourForm.addEventListener("submit", (e) =>{
+
+            e.preventDefault()
+            //console.log(ourInput.value)
+            createItem(ourInput.value)
+       })
+
+       function createItem(userinput) {
+           
+           let ourHtml = `<li> ${userinput} <button onclick="deleteItem(this)"> Delete </button> </li>`
+
+           ourList.insertAdjacentHTML("beforeend", ourHtml)
+           ourInput.value = ""
+           ourInput.focus()
+       }
+
+       function deleteItem(todo) {
+           todo.parentElement.remove()
+       }
+    </script>
+</body>
+</html>
